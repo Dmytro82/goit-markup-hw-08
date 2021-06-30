@@ -24,6 +24,103 @@
           <span class="logo--blue">Web</span>Studio</a
         >
 
+        <!-- кнопка открытия меню -->
+
+        <button
+          type="button"
+          class="page-header__button-open button"
+          data-menu-open
+        >
+          <svg class="" width="40px" height="40px">
+            <use href="./images/svg/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <div class="page-header__menu menu is-hidden" data-menu>
+          <!-- кнопка закрытия меню -->
+          <button
+            type="button"
+            class="menu__button-close button"
+            data-menu-close
+          >
+            <svg class="" width="40px" height="40px">
+              <use href="./images/svg/sprite.svg#icon-closeMenu"></use>
+            </svg>
+          </button>
+
+          <div class="menu__container">
+            <ul class="menu__list menu-nav list">
+              <li class="menu-nav__item item">
+                <a
+                  href="./index.html"
+                  class="menu-nav__link link menu-nav__link--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="menu-nav__item item">
+                <a href="./portfolio.html" class="menu-nav__link link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="menu-nav__item item">
+                <a href="#" class="menu-nav__link link">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list menu-contact list">
+              <li class="menu-contact__item menu-contact__item--tel item">
+                <a href="tel:+380961111111" class="menu-contact__link link">
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="menu-contact__item menu-contact__item--mailto item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="menu-contact__link link"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+
+            <ul class="menu__list menu-social list">
+              <li class="menu-social__item item">
+                <a
+                  class="menu-social__link link"
+                  target="_blank"
+                  href="https://Instagram.com/"
+                  >Instagram</a
+                >
+              </li>
+              <li class="menu-social__item item">
+                <a
+                  class="menu-social__link link"
+                  target="_blank"
+                  href="https://twitter.com/"
+                  >Twitter</a
+                >
+              </li>
+              <li class="menu-social__item item">
+                <a
+                  class="menu-social__link link"
+                  target="_blank"
+                  href="https://facebook.com/"
+                  >Facebook</a
+                >
+              </li>
+              <li class="menu-social__item item">
+                <a
+                  class="menu-social__link link"
+                  target="_blank"
+                  href="https://linkedIn.com/"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- навигация -->
         <nav>
           <ul class="site-nav list">
             <li class="site-nav__item item">
@@ -615,15 +712,8 @@
           });
       })();
     </script>
-    <!-- подключение модалки -->
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="js/mobile-menu.js"></script>
-    <!-- <script src="./js/menu.js"></script> -->
+    <!-- подключение модалки и меню -->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

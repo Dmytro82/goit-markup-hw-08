@@ -1,20 +1,26 @@
 .page-header {
   position: relative;
-  border-bottom: 1px solid var(--color-liane-header);
+
   &__container {
     @include dis-al(flex, center);
     min-height: 60px;
     padding-top: 0;
     padding-bottom: 0;
   }
-  &__button {
+  &__button-open {
     margin-left: auto;
     padding: 0;
   }
+  &__button-open:hover,
+  &__button-open:focus {
+    fill: var(--accent-color);
+  }
 
   @media screen and (min-width: 768px) {
+    border-bottom: 1px solid var(--color-liane-header);
     min-height: 80px;
-    &__button {
+    &__button-open,
+    &__menu {
       display: none;
     }
   }
