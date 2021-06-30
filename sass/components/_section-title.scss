@@ -1,0 +1,9 @@
+.section-title {
+  @include font-line(28px, 1.18);
+  text-align: center;
+  color: var(--title-text-color);
+
+  @media screen and (min-width: 1200px) {
+    @include font-line(36px, 1.17);
+  }
+}

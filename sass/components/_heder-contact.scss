@@ -1,0 +1,61 @@
+.contact {
+  margin-left: 84px;
+  &__link {
+    @include dis-al(flex, center);
+    @include font(500, 12px, 1.67, 0.02em);
+    color: var(--primary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__item + &__item {
+    margin-top: 10px;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__icon--mailto {
+    width: 14px;
+    height: 10px;
+  }
+  &__icon--tel {
+    width: 10px;
+    height: 14px;
+  }
+  &__icon:hover,
+  &__icon:focus {
+    fill: var(--accent-color);
+  }
+}
+.contact {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+    &__item + &__item {
+      margin-top: 0;
+      margin-left: 50px;
+    }
+    &__link {
+      @include font(500, 14px, 1.14, 0.02em);
+    }
+    &__icon--mailto {
+      width: 16px;
+      height: 12px;
+    }
+    &__icon--tel {
+      width: 10px;
+      height: 16px;
+    }
+    &__icon {
+      margin-right: 8px;
+    }
+  }
+}

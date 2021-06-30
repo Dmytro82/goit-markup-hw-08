@@ -1,0 +1,11 @@
+.logo {
+  font-family: 'Raleway', sans-serif;
+  @include font-weight(700, 24px, 1.17);
+  color: var(--primary-black-color);
+  &--blue {
+    color: var(--accent-color);
+  }
+  @media screen and (min-width: 1200px) {
+    @include font-weight(700, 26px, 1.2);
+  }
+}

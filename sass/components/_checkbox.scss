@@ -1,0 +1,25 @@
+.checkbox {
+  &__label {
+    @include dis-al(flex, center);
+    justify-content: space-evenly;
+    min-height: 24px;
+    margin-bottom: 30px;
+    @include font-letter(14px, 1.71, 0.03em);
+  }
+  &__icon {
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--title-text-color);
+    border-radius: 2px;
+    fill: var(--primary-whait-color);
+  }
+
+  &__link {
+    color: var(--accent-color);
+  }
+  &__input:checked + &__icon {
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 2px;
+  }
+}

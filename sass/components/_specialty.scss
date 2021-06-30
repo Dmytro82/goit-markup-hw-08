@@ -1,0 +1,29 @@
+.specialty {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  &__container {
+    padding-top: 0;
+    text-align: center;
+  }
+  &__list {
+    position: relative;
+    display: flex;
+  }
+  &__item + &__item {
+    margin-left: 30px;
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__subtitle {
+    position: absolute;
+    bottom: 0px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    min-width: 370px;
+    @include font-line(14px, 1.14);
+    color: var(--primary-whait-color);
+    background-color: var(--bg-element-specialty);
+  }
+}
