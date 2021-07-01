@@ -1,6 +1,6 @@
 .form {
-  width: 448px;
-  margin: 40px auto;
+  max-width: 448px;
+  margin: 40px;
   @include font-letter(12px, 1.17, 0.01em);
   &__title {
     margin-bottom: 12px;

@@ -1,5 +1,5 @@
 .contact {
-  margin-left: 84px;
+  margin-left: auto;
   &__link {
     @include dis-al(flex, center);
     @include font(500, 12px, 1.67, 0.02em);
