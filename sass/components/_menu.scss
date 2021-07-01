@@ -60,4 +60,15 @@
   font-size: 18px;
   line-height: 22px;
   color: var(--accent-color);
+  &__link {
+    padding: 0 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  &__link:first-child {
+    padding-left: 0;
+  }
+  &__link:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
 }

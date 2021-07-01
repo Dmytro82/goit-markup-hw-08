@@ -411,6 +411,20 @@ body {
   color: var(--accent-color);
 }
 
+.menu-social__link {
+  padding: 0 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-social__link:first-child {
+  padding-left: 0;
+}
+
+.menu-social__link:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
 @media screen and (max-width: 1199px) {
   .specialty {
     display: none;
