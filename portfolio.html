@@ -23,6 +23,103 @@
           <span class="logo--blue">Web</span>Studio</a
         >
 
+        <!-- кнопка открытия меню -->
+
+        <button
+          type="button"
+          class="page-header__button-open button"
+          data-menu-open
+        >
+          <svg class="" width="40px" height="40px">
+            <use href="./images/svg/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <div class="page-header__menu menu is-hidden" data-menu>
+          <button
+            type="button"
+            class="menu__button-close button"
+            data-menu-close
+          >
+            <svg class="" width="40px" height="40px">
+              <use href="./images/svg/sprite.svg#icon-closeMenu"></use>
+            </svg>
+          </button>
+
+          <div class="menu__container">
+            <ul class="menu__list menu-nav list">
+              <li class="menu-nav__item item">
+                <a href="./index.html" class="menu-nav__link link">Студия</a>
+              </li>
+              <li class="menu-nav__item item">
+                <a
+                  href="./portfolio.html"
+                  class="menu-nav__link link menu-nav__link--current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="menu-nav__item item">
+                <a href="#contacts" target="_blank" class="menu-nav__link link"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+            <div class="menu__between">
+              <ul class="menu__list menu-contact list">
+                <li class="menu-contact__item menu-contact__item--tel item">
+                  <a href="tel:+380961111111" class="menu-contact__link link">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="menu-contact__item menu-contact__item--mailto item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="menu-contact__link link"
+                  >
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="menu__list menu-social list">
+                <li class="menu-social__item item">
+                  <a
+                    class="menu-social__link link"
+                    target="_blank"
+                    href="https://Instagram.com/"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="menu-social__item item">
+                  <a
+                    class="menu-social__link link"
+                    target="_blank"
+                    href="https://twitter.com/"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="menu-social__item item">
+                  <a
+                    class="menu-social__link link"
+                    target="_blank"
+                    href="https://facebook.com/"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="menu-social__item item">
+                  <a
+                    class="menu-social__link link"
+                    target="_blank"
+                    href="https://linkedIn.com/"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- навигация -->
         <nav>
           <ul class="site-nav list">
             <li class="site-nav__item item">
@@ -44,7 +141,7 @@
         <ul class="contact list">
           <li class="contact__item item">
             <a href="mailto:info@devstudio.com" class="contact__link link">
-              <svg class="contact__icon" width="16px" height="12px">
+              <svg class="contact__icon contact__icon--mailto">
                 <use href="./images/svg/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -52,7 +149,7 @@
           </li>
           <li class="contact__item item">
             <a href="tel:+380961111111" class="contact__link link">
-              <svg class="contact__icon" width="10" height="16">
+              <svg class="contact__icon contact__icon--tel">
                 <use href="./images/svg/sprite.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -120,13 +217,34 @@
               <article class="portfolio-card">
                 <a href="#" class="portfolio__link link">
                   <div class="portfolio-card__thumb">
-                    <img
-                      class="portfolio-card__img img"
-                      src="./images/portfolio-img/technocryk.jpg"
-                      alt="Технокряк"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img/technocrykDesk.jpg    1x,
+                          ./images/portfolio-img/technocrykDesk@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio-img/technocrykTab.jpg    1x,
+                          ./images/portfolio-img/technocrykTab@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        class="portfolio-card__img img"
+                        srcset="
+                          ./images/portfolio-img/technocrykMob.jpg    1x,
+                          ./images/portfolio-img/technocrykMob@2x.jpg 2x
+                        "
+                        src="./images/portfolio-img/technocryk.jpg"
+                        alt="Технокряк"
+                      />
+                    </picture>
+
                     <div class="portfolio-card__overlay">
                       <p class="portfolio-card__text">
                         Технокряк это современная площадка распространения
@@ -140,7 +258,11 @@
                     </div>
                   </div>
                   <div class="portfolio-card__content">
-                    <h3 class="portfolio-card__title">Технокряк</h3>
+                    <h3
+                      class="portfolio-card__title portfolio-card__title--first"
+                    >
+                      Технокряк
+                    </h3>
                     <p class="portfolio-card__subtext">Веб-сайт</p>
                   </div>
                 </a>
@@ -396,14 +518,14 @@
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="item">
+              <li class="address__item item">
                 <a
                   href="mailto:info@devstudio.com"
                   class="address__webmail address__link link"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="item">
+              <li class="address__item item">
                 <a
                   href="tel:+380961111111"
                   class="address__phone address__link link"
@@ -472,5 +594,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

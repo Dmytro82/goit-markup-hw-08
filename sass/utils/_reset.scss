@@ -8,14 +8,14 @@ ul {
 }
 .img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 .list {
   list-style: none;
 }
 .link {
-  display: inline-block;
+  // display: inline-block;
   text-decoration: none;
   color: inherit;
   outline: 0px;

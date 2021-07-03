@@ -37,7 +37,6 @@
         </button>
 
         <div class="page-header__menu menu is-hidden" data-menu>
-          <!-- кнопка закрытия меню -->
           <button
             type="button"
             class="menu__button-close button"
@@ -63,60 +62,63 @@
                 >
               </li>
               <li class="menu-nav__item item">
-                <a href="#" class="menu-nav__link link">Контакты</a>
+                <a href="#contacts" target="_blank" class="menu-nav__link link"
+                  >Контакты</a
+                >
               </li>
             </ul>
+            <div class="menu__between">
+              <ul class="menu__list menu-contact list">
+                <li class="menu-contact__item menu-contact__item--tel item">
+                  <a href="tel:+380961111111" class="menu-contact__link link">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="menu-contact__item menu-contact__item--mailto item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="menu-contact__link link"
+                  >
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
 
-            <ul class="menu__list menu-contact list">
-              <li class="menu-contact__item menu-contact__item--tel item">
-                <a href="tel:+380961111111" class="menu-contact__link link">
-                  +38 096 111 11 11
-                </a>
-              </li>
-              <li class="menu-contact__item menu-contact__item--mailto item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="menu-contact__link link"
-                >
-                  info@devstudio.com
-                </a>
-              </li>
-            </ul>
-
-            <ul class="menu__list menu-social list">
-              <li class="menu-social__item item">
-                <a
-                  class="menu-social__link link"
-                  target="_blank"
-                  href="https://Instagram.com/"
-                  >Instagram</a
-                >
-              </li>
-              <li class="menu-social__item item">
-                <a
-                  class="menu-social__link link"
-                  target="_blank"
-                  href="https://twitter.com/"
-                  >Twitter</a
-                >
-              </li>
-              <li class="menu-social__item item">
-                <a
-                  class="menu-social__link link"
-                  target="_blank"
-                  href="https://facebook.com/"
-                  >Facebook</a
-                >
-              </li>
-              <li class="menu-social__item item">
-                <a
-                  class="menu-social__link link"
-                  target="_blank"
-                  href="https://linkedIn.com/"
-                  >LinkedIn</a
-                >
-              </li>
-            </ul>
+              <ul class="menu__list menu-social list">
+                <li class="menu-social__item item">
+                  <a
+                    class="menu-social__link link"
+                    target="_blank"
+                    href="https://Instagram.com/"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="menu-social__item item">
+                  <a
+                    class="menu-social__link link"
+                    target="_blank"
+                    href="https://twitter.com/"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="menu-social__item item">
+                  <a
+                    class="menu-social__link link"
+                    target="_blank"
+                    href="https://facebook.com/"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="menu-social__item item">
+                  <a
+                    class="menu-social__link link"
+                    target="_blank"
+                    href="https://linkedIn.com/"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -164,6 +166,7 @@
     <!-- main container studio -->
     <main class="main-studio">
       <!-- hero -->
+
       <section class="hero">
         <div class="hero__container container">
           <h1 class="hero__title">
@@ -179,6 +182,7 @@
           </button>
         </div>
       </section>
+
       <!-- features -->
       <section class="features">
         <div class="features__container container">
@@ -275,13 +279,34 @@
           <ul class="team__list list">
             <li class="team__item item">
               <div class="team-card">
-                <img
-                  class="team-card__img"
-                  src="./images/index-img/productDesigner.jpg"
-                  alt="дизайнер продуктов"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/index-img/productDesignerDesk.jpg    1x,
+                      ./images/index-img/productDesignerDesk@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-img/productDesignerTab.jpg    1x,
+                      ./images/index-img/productDesignerTab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    class="team-card__img img"
+                    srcset="
+                      ./images/index-img/productDesignerMob.jpg    1x,
+                      ./images/index-img/productDesignerMob@2x.jpg 2x
+                    "
+                    src="./images/index-img/productDesigner.jpg"
+                    alt="дизайнер продуктов"
+                  />
+                </picture>
+
                 <h3 class="team-card__subtitle">Игорь Демьяненко</h3>
                 <p class="team-card__text">Product Designer</p>
                 <ul class="team-social list">
@@ -320,13 +345,34 @@
             </li>
             <li class="team__item item">
               <div class="team-card">
-                <img
-                  class="team-card__img"
-                  src="./images/index-img/frontendDeveloper.jpg"
-                  alt="Фронтенд-разработчик"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/index-img/frontendDeveloperDesk.jpg    1x,
+                      ./images/index-img/frontendDeveloperDesk@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-img/frontendDeveloperTab.jpg    1x,
+                      ./images/index-img/frontendDeveloperTab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    class="team-card__img img"
+                    srcset="
+                      ./images/index-img/frontendDeveloperMob.jpg    1x,
+                      ./images/index-img/frontendDeveloperMob@2x.jpg 2x
+                    "
+                    src="./images/index-img/frontendDeveloper.jpg"
+                    alt="Фронтенд-разработчик"
+                  />
+                </picture>
+
                 <h3 class="team-card__subtitle">Ольга Репина</h3>
                 <p class="team-card__text">Frontend Developer</p>
                 <ul class="team-social list">
@@ -365,13 +411,34 @@
             </li>
             <li class="team__item item">
               <div class="team-card">
-                <img
-                  class="team-card__img"
-                  src="./images/index-img/marketing.jpg"
-                  alt="Маркетинг"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/index-img/marketingDesk.jpg    1x,
+                      ./images/index-img/marketingDesk@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-img/marketingTab.jpg    1x,
+                      ./images/index-img/marketingTab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    class="team-card__img img"
+                    srcset="
+                      ./images/index-img/marketingMob.jpg    1x,
+                      ./images/index-img/marketingMob@2x.jpg 2x
+                    "
+                    src="./images/index-img/marketing.jpg"
+                    alt="Маркетинг"
+                  />
+                </picture>
+
                 <h3 class="team-card__subtitle">Николай Тарасов</h3>
                 <p class="team-card__text">Marketing</p>
                 <ul class="team-social list">
@@ -410,13 +477,34 @@
             </li>
             <li class="team__item item">
               <div class="team-card">
-                <img
-                  class="team-card__img"
-                  src="./images/index-img/uiDesigner.jpg"
-                  alt="UI дизайнер"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/index-img/uiDesignerDesk.jpg    1x,
+                      ./images/index-img/uiDesignerDesk@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-img/uiDesignerTab.jpg    1x,
+                      ./images/index-img/uiDesignerTab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    class="team-card__img img"
+                    srcset="
+                      ./images/index-img/uiDesignerMob.jpg    1x,
+                      ./images/index-img/uiDesignerMob@2x.jpg 2x
+                    "
+                    src="./images/index-img/uiDesigner.jpg"
+                    alt="UI дизайнер"
+                  />
+                </picture>
+
                 <h3 class="team-card__subtitle">Михаил Ермаков</h3>
                 <p class="team-card__text">UI Designer</p>
                 <ul class="team-social list">
@@ -508,6 +596,7 @@
       </section>
     </main>
     <!-- main footer -->
+
     <footer class="footer">
       <div id="contacts" class="footer__container container">
         <div class="footer-contacts">
@@ -523,14 +612,14 @@
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="item">
+              <li class="address__item item">
                 <a
                   href="mailto:info@devstudio.com"
                   class="address__webmail address__link link"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="item">
+              <li class="address__item item">
                 <a
                   href="tel:+380961111111"
                   class="address__phone address__link link"
@@ -599,6 +688,7 @@
         </div>
       </div>
     </footer>
+
     <!-- modal window  -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -685,7 +775,7 @@
               <use href="./images/svg/sprite.svg#icon-iconCheck"></use>
             </svg>
             Соглашаюсь с рассылкой и принимаю
-            <a class="checkbox__link" href="#">Условия договора</a>
+            <a class="checkbox__link" href="#"> Условия договора</a>
           </label>
 
           <!-- кнопка отправки модалки -->

@@ -1,42 +1,61 @@
-// .subscription {
-//   margin-left: 93px;
-//   &__title {
-//     margin-bottom: 20px;
-//     @include font-line(14px, 1.17);
-//     color: var(--primary-whait-color);
-//   }
-//   &__input {
-//     width: 358px;
-//     padding: 15px 16px;
-//     background-color: inherit;
-//     color: var(--primary-whait-color);
-//     border: 1px solid var(--color-border-subscription);
-//     border-radius: 4px;
-//     transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   }
-//   &__input:hover,
-//   &__input:focus {
-//     filter: drop-shadow(var(--shadov-btn-footer));
-//   }
-//   &__input::placeholder {
-//     @include font-letter(16px, 1.25, 0.03em);
-//     color: var(--color-with-transparency);
-//   }
-//   &__icon {
-//     width: 24px;
-//     height: 24px;
-//     margin-left: 10px;
-//   }
-// }
+.subscription {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    min-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 0;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @include font-line(14px, 1.17);
+    color: var(--primary-whait-color);
+  }
+  &__input {
+    width: 100%;
+    padding: 15px 16px;
+    background-color: inherit;
+    color: var(--primary-whait-color);
+    border: 1px solid var(--color-border-subscription);
+    border-radius: 4px;
+    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
+  }
+  &__input:hover,
+  &__input:focus {
+    filter: drop-shadow(var(--shadov-btn-footer));
+  }
+  &__input::placeholder {
+    @include font-letter(16px, 1.25, 0.03em);
+    color: var(--color-with-transparency);
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+}
 
-// .button__subscription {
-//   padding: 10px 29px;
-//   margin-left: 12px;
-//   @include font(700, 16px, 1.87, 0.06em);
-//   fill: currentColor;
-//   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   &__subscription:hover,
-//   &__subscription:focus {
-//     box-shadow: var(--shadov-btn-footer);
-//   }
-// }
+.button__subscription {
+  min-width: 200px;
+  padding: 10px 29px;
+
+  margin-top: 20px;
+  @include font(700, 16px, 1.87, 0.06em);
+  fill: currentColor;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+    margin-top: 0;
+  }
+  &__subscription:hover,
+  &__subscription:focus {
+    box-shadow: var(--shadov-btn-footer);
+  }
+}
