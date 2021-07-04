@@ -50,8 +50,11 @@
     @include font-letter(18px, 2, 0.06em);
     color: var(--title-text-color);
   }
+
   &__title--first {
-    margin-bottom: 40px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 40px;
+    }
   }
   &__subtext {
     @include font-line(16px, 1.87);

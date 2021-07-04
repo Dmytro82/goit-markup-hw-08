@@ -6,7 +6,7 @@
     padding-bottom: 60px;
     @media screen and (min-width: 768px) {
       @include dis-al(flex, baseline);
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
     }
     @media screen and (min-width: 1200px) {

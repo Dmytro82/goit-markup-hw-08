@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-
+  border-bottom: 1px solid var(--color-liane-header);
   &__container {
     @include dis-al(flex, center);
     min-height: 60px;
@@ -17,7 +17,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    border-bottom: 1px solid var(--color-liane-header);
     min-height: 80px;
     &__button-open,
     &__menu {

@@ -12,12 +12,13 @@
       var(--hero-gradient)
     ),
     url(../images/index-img/HeaderMob.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url(../images/index-img/HeaderMob@2x.jpg);
   }
-  background-position: center;
   background-size: 480px 400px;
 
   &__container {
