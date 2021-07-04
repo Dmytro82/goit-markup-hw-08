@@ -26,26 +26,22 @@
   margin: 20px 15px;
   max-height: 609px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: $mob) {
     margin: 93px 15px;
     width: 450px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tab) {
     position: absolute;
     top: 50%;
     left: 50%;
-
-    // width: 100vw;
-    // width: 450px;
-    min-height: 609px;
+    height: 100%;
     margin: 0;
     transform: translate(-50%, -50%) scale(1);
-
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desk) {
     width: 528px;
-    min-height: 581px;
+    height: 581px;
   }
   .is-hidden & {
     transform: translate(-50%, -50%) scale(0.8);

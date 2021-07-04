@@ -2,8 +2,14 @@
   display: $dis;
   align-items: $al;
 }
-//
+// @include dis-al(inline-flex, center);
 
+@mixin dis-jc($dis, $al, $jc) {
+  display: $dis;
+  align-items: $al;
+  justify-content: $jc;
+}
+// @include dis-jc($dis, $al, $jc)
 @mixin font-line($fs, $lh) {
   font-size: $fs;
   line-height: $lh;

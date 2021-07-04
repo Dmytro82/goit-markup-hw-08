@@ -8,16 +8,16 @@
     min-width: 320px;
   }
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and (min-width: $mob) {
+    width: $mob;
   }
 
-  @media screen and (min-width: 768px) {
-    width: 768px;
+  @media screen and (min-width: $tab) {
+    width: $tab;
   }
 
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: $desk) {
+    width: $desk;
     padding: 94px 15px;
   }
 }

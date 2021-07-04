@@ -49,26 +49,23 @@
     margin-top: 32px;
   }
   &__item--tel {
-    font-size: 34px;
-    line-height: 40px;
+    @include font-line(34px, 1.18);
     color: var(--accent-color);
   }
   &__item--mailto {
-    font-size: 24px;
-    line-height: 28px;
+    @include font-line(24px, 1.17);
     color: var(--primary-text-color);
   }
 }
 
 .menu-social {
-  margin-top: 64px;
   display: flex;
-  font-size: 18px;
-  line-height: 22px;
+  margin-top: 64px;
+  @include font-line(18px, 1.22);
   color: var(--accent-color);
   &__item {
     padding: 0 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    border-right: 1px solid var(--border-social);
   }
   &__item:last-child {
     padding-right: 0;

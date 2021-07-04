@@ -38,7 +38,7 @@
     box-shadow: var(--primary-shadow-hover);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $tab) {
   .hero {
     max-width: 768px;
     background-image: url(../images/index-img/HeaderTab.jpg);
@@ -50,7 +50,7 @@
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $desk) {
   .hero {
     max-width: 1600px;
     height: 600px;
@@ -66,8 +66,7 @@
       padding-bottom: 200px;
     }
     &__title {
-      font-size: 44px;
-      line-height: 1.36;
+      @include font-line(44px, 1.36);
     }
   }
 }

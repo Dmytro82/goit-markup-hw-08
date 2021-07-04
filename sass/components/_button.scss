@@ -1,6 +1,5 @@
 .button {
-  @include dis-al(inline-flex, center);
-  justify-content: center;
+  @include dis-jc(inline-flex, center, center);
   @include font-weight(500, 16px, 1.62);
   padding: 10px 32px;
   border: 0;
